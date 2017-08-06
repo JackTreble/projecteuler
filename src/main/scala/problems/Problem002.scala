@@ -7,8 +7,8 @@ object Problem002 {
     addFibNumbersFilteredLimited(limit, (v : BigInt) => v % 2 == 0)
   }
 
-  @tailrec def addFibNumbersFilteredLimited(limit : BigInt, additionFilter : (BigInt) => Boolean, prev : BigInt = 0, next : BigInt = 1, count : BigInt = 0): BigInt = {
-    if(count + next <= limit){
+  @tailrec def addFibNumbersFilteredLimited(limit : BigInt, additionFilter : (BigInt) => Boolean, prev : BigInt = 1, next : BigInt = 2, count : BigInt = 0): BigInt = {
+    if(next <= limit){
       val newCount = if (additionFilter(next)) count + next else count
       addFibNumbersFilteredLimited(limit, additionFilter, next, prev + next , newCount)
     } else {
