@@ -14,6 +14,16 @@ class Problem003Test extends FlatSpec with Matchers {
     assert(factors == Set[BigInt](5, 7, 13, 29))
   }
 
+  "isPrime" should "return true for input of 7" in {
+    val isPrime = Problem003.isPrime(BigInt(7))
+    assert(isPrime == true)
+  }
+
+  it should "return true for input of 6" in {
+    val isPrime = Problem003.isPrime(BigInt(6))
+    assert(isPrime == false)
+  }
+
   "largestPrimeFactorOf" should "return 29 for input of 13,195" in {
     val largestPrimeFactorOf = Problem003.largestPrimeFactorOf(13195)
     assert(largestPrimeFactorOf == 29)
@@ -24,5 +34,4 @@ class Problem003Test extends FlatSpec with Matchers {
     val largestPrimeFactorOf = Problem003.largestPrimeFactorOf(BigInt("600851475143"))
     assert(largestPrimeFactorOf == 6857)
   }
-
 }

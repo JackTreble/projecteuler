@@ -29,5 +29,4 @@ class Problem001Test extends FlatSpec with Matchers {
     val multiples = Problem001.sumMultiplesOf3And5(1000)
     assert(multiples == 233168)
   }
-
 }
