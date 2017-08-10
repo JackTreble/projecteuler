@@ -1,8 +1,13 @@
 package problems
 
 import scala.annotation.tailrec
+import scala.math.BigInt
 
 object Problem003 {
+
+  def largestPrimeFactorOf(value: BigInt): BigInt = {
+    primeFactorsOf(value).max
+  }
 
   def primeFactorsOf(value: BigInt): Set[BigInt] = {
     @tailrec def primeFactors(value: BigInt, prime: BigInt = 2, facts: Set[BigInt] = Set()):
@@ -16,12 +21,8 @@ object Problem003 {
   }
 
   def isPrime(prime: BigInt): Boolean = {
-    !(prime % 2 == 0 && prime % 3 == 0)
+    val two = BigInt.int2bigInt(2)
+    !(two until prime exists (prime % _ == 0))
   }
-
-  def largestPrimeFactorOf(value: BigInt): BigInt = {
-    primeFactorsOf(value).max
-  }
-
 
 }
