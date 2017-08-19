@@ -19,7 +19,7 @@ class Problem003Test extends FlatSpec with Matchers {
     assert(isPrime == false)
   }
 
-  "factorsOf" should "return 2, 3 and 5 for input of 60" in {
+  "primeFactorsOf" should "return 2, 3 and 5 for input of 60" in {
     val factors = Problem003.primeFactorsOf(60)
     assert(factors == Set[BigInt](2, 3, 5))
   }

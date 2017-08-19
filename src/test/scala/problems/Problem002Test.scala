@@ -4,8 +4,8 @@ import org.scalatest.{FlatSpec, Matchers}
 
 class Problem002Test extends FlatSpec with Matchers {
 
-  "addFibNumbersFilteredLimited" should "return 18 when filtered to less than 10" in {
-    val evenNumbers = Problem002.addFibNumbersFilteredLimited(18, (v : BigInt)=> v < 10)
+  "sumFibonacciNumbers" should "return 18 when filtered to less than 10" in {
+    val evenNumbers = Problem002.sumFibonacciNumbers(18, (v : BigInt)=> v < 10)
     assert(evenNumbers == 18)
   }
 
